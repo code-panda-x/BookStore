@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+        <h1>Panda BookStore</h1>
+        <h1 class="w3-xlarge">Books are the ladder of human progress. Click books below to download, you can pay for the book if you want to</h1>
+        <h1 class="w3-xlarge">Founder: Kehan Meng</h1>
+        
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <partial name="_LoginPartial" />
+        </div>
+        <div class="w3-padding-32">
+            <div class="w3-bar w3-border">
+                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="w3-bar-item w3-button w3-light-grey" asp-area="" asp-controller="Books" asp-action="Index">Books</a>
+                <a class="w3-bar-item w3-button w3-light-grey" asp-area="" asp-controller="Orders" asp-action="Index">Order</a>
+                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Pays" asp-action="Index">Pay me!</a>
+                <a class="w3-bar-item w3-button w3-hide-small" asp-area="" asp-controller="Feedbacks" asp-action="Index">Feedback</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
